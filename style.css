@@ -11,3 +11,9 @@ body {
   background-color: #5f99de;
 }
 
+.container {
+  background-color: #e7e7e7;
+  height: 100vh;
+  margin: 0 auto;
+  border: 1px solid MediumVioletRed;
+}
