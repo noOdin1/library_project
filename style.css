@@ -17,5 +17,13 @@ body {
   /* Part of the responsive design */
   width: clamp(400px, 75%, 1440px);
   margin: 0 auto;
+  background-image: linear-gradient(
+    white 1em,
+    white 14%,
+    #a7b9d2 0.2em,
+    #e2e8f0 15%,
+    transparent 0.1em,
+    transparent 100%
+  );
   border: 1px solid MediumVioletRed;
 }
