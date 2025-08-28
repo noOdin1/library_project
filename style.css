@@ -27,3 +27,10 @@ body {
   );
   border: 1px solid MediumVioletRed;
 }
+
+.topBar {
+  height: 14vh;
+  width: 100%;
+  background-color: white;
+  border: 1px solid MediumVioletRed;
+}
