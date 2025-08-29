@@ -9,7 +9,23 @@
   <body>
     <div class="container">
       <div class="topBar">
-        <h1>Virtual Library</h1>
+        <h2>Virtual Library</h2>
+        <form action="" method="post">
+          <fieldset>
+            <legend>Add Books</legend>
+            <label for="booktitle">Book title: </label>
+            <input type="text" id="booktitle" name="title" required />
+            <label for="bookauthor">Book author: </label>
+            <input type="text" id="bookauthor" name="author" required />
+            <label for="bookpages">Pages: </label>
+            <input type="text" id="bookpages" name="pages" required />
+            <p id="bookStat">Unread</p>
+            <label class="switch">
+              <input type="checkbox" name="checkbox" />
+              <span class="slider round"></span>
+            </label>
+          </fieldset>
+        </form>
       </div>
       <div class="content"></div>
     </div>
