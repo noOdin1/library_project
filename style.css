@@ -25,14 +25,16 @@ body {
     transparent 0.1em,
     transparent 100%
   );
-  border: 1px solid MediumVioletRed;
+  /* border: 1px solid MediumVioletRed; */
+  border: 1px solid transparent;
 }
 
 .topBar {
   height: 14vh;
   width: 100%;
   background-color: white;
-  border: 1px solid MediumVioletRed;
+  border: 1px solid transparent;
+  /* border: 1px solid MediumVioletRed; */
 }
 
 h1 {
