@@ -85,3 +85,13 @@ libCard.appendChild(bookTitle);
 libCard.appendChild(bookAuthor);
 
 content[0].appendChild(libCard);
+
+let readBook = document.getElementById("bookStat");
+let checkbox = document.querySelector("input[name=checkbox]");
+checkbox.addEventListener("change", function () {
+  if (this.checked) {
+    readBook.textContent = "Read";
+  } else {
+    readBook.textContent = "Unread";
+  }
+});
