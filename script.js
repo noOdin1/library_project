@@ -71,3 +71,17 @@ console.log("Book1 = " + book1.info());
 console.log("Book2 = " + book2.info());
 console.log("Book3 = " + book3.info());
 
+/* Test code for appending new element to "content"*/
+let content = document.getElementsByClassName("content");
+
+let libCard = document.createElement("div");
+libCard.classList.add("libraryCard");
+let bookTitle = document.createElement("p");
+let bookAuthor = document.createElement("p");
+bookTitle.textContent = book1.title;
+bookAuthor.textContent = book1.author;
+
+libCard.appendChild(bookTitle);
+libCard.appendChild(bookAuthor);
+
+content[0].appendChild(libCard);
