@@ -95,3 +95,13 @@ checkbox.addEventListener("change", function () {
     readBook.textContent = "Unread";
   }
 });
+
+/* source: https://stackoverflow.com/questions/10955745/get-values-from-submitted-form */
+let form = document.getElementById("addBookForm");
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const data = new FormData(form);
+  for (const [name, value] of data) {
+    console.log(name, ":", value);
+  }
+});
