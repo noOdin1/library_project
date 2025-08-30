@@ -91,14 +91,35 @@ let checkbox = document.querySelector("input[name=checkbox]");
 checkbox.addEventListener("change", function () {
   if (this.checked) {
     readBook.textContent = "Read";
+    document.getElementById("statCheckHidden").disabled = true;
   } else {
     readBook.textContent = "Unread";
+    document.getElementById("statCheckHidden").disabled = false;
   }
 });
 
-/* source: https://stackoverflow.com/questions/10955745/get-values-from-submitted-form */
+/* source: https://stackoverflow.com/questions/10955745/get-values-from-submitted-form
+ * NOTE: The solution pointed out above does solve the problem of missing data from
+ *       checkbox, if the checkbox weren't 'checked'. But this would not solve the
+ *       problem of displaying those changes on the webpage. For that I reverted back
+ *       to using the 'change' event above. The 2 'input' is still retained and the
+ *       'statCheckHidden' will be disabled when the checkbox is 'checked'.
+ *       The values captured will be 'checkbox' or 'checkbox1'.
+ **/
 let form = document.getElementById("addBookForm");
 form.addEventListener("submit", function (e) {
+  // if (document.getElementById("statCheck").checked) {
+  //   document.getElementById("statCheckHidden").disabled = true;
+  //   console.log("[eventListener] checkbox is checked.");
+  //   readBook.textContent = "Read";
+  // }
+  //
+  // if (document.getElementById("statCheck").unchecked) {
+  //   // document.getElementById("statCheckHidden").disabled = false;
+  //   console.log("[eventListener] checkbox is unchecked.");
+  //   readBook.textContent = "Unread";
+  // }
+
   e.preventDefault();
   const data = new FormData(form);
   for (const [name, value] of data) {
