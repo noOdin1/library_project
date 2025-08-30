@@ -87,7 +87,24 @@ libCard.appendChild(bookAuthor);
 content[0].appendChild(libCard);
 
 let readBook = document.getElementById("bookStat");
-let checkbox = document.querySelector("input[name=checkbox]");
+/*
+ * NOTE: The example solution suggested attaching the event listener
+ *       to 'input' with 'name=checkbox',
+ *         let checkbox = document.querySelector("input[name=checkbox]");
+ *       Here, the requirement is to return a value of either 'Unread' or 'Read'.
+ *       Checkbox will show a value if it is 'checked', otherwise no value
+ *       will be shown.
+ *       One way to workaround this is to have a type='hidden' input with the
+ *       same name as the checkbox intended for. That way if the original checkbox
+ *       is 'unchecked' then the hidden input will show up. But if the original
+ *       checkbox is 'checked' then the 'hidden' input must be disabled.
+ *       Therefore in the html,
+ *         <input type="hidden" id="statCheckHidden" name="checkbox" value="Unread">
+ *         <input type="checkbox" id="statCheck" name="checkbox" value="Read">
+ *       and the eventListenter is attached to the 'id' not the 'name'.
+ **/
+//
+let checkbox = document.getElementById("statCheck");
 checkbox.addEventListener("change", function () {
   if (this.checked) {
     readBook.textContent = "Read";
