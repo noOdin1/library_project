@@ -122,10 +122,16 @@ legend {
   margin-left: 0.6em;
 }
 
+.leftBar {
   grid-row: 2/3;
   grid-column: 1/2;
   height: 100%;
   padding: 1em;
+  /* background-color: #ff822e; */
+  display: flex;
+  flex-direction: column;
+}
+
 .content {
   grid-row: 2/3;
   grid-column: 2/3;
