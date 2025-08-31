@@ -40,10 +40,6 @@ function Book(uuid, title, author, pages, status) {
 
 function addBookToLibrary() {}
 
-/* Assuming that self.crypto.randomUUID() is available */
-
-let uuid = self.crypto.randomUUID();
-console.log("Sample of uuid: " + uuid); // for example "36b8f84d-df4e-4d49-b662-bcde71a8764f"
 
 const book1 = new Book(
   self.crypto.randomUUID(),
@@ -67,9 +63,6 @@ const book3 = new Book(
   "unread",
 );
 
-console.log("Book1 = " + book1.info());
-console.log("Book2 = " + book2.info());
-console.log("Book3 = " + book3.info());
 
 /* Test code for appending new element to "content"*/
 let content = document.getElementsByClassName("content");
