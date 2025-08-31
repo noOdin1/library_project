@@ -38,8 +38,12 @@ function Book(uuid, title, author, pages, status) {
   };
 }
 
-function addBookToLibrary() {}
+function addBookToLibrary(book) {
+  myLibrary.push(book);
 
+  // console.log("[addBookLibrary] ")
+  console.log(myLibrary);
+}
 
 const book1 = new Book(
   self.crypto.randomUUID(),
@@ -48,6 +52,7 @@ const book1 = new Book(
   1216,
   "read",
 );
+
 const book2 = new Book(
   self.crypto.randomUUID(),
   "The Lost Symbol",
@@ -55,6 +60,7 @@ const book2 = new Book(
   624,
   "read",
 );
+
 const book3 = new Book(
   self.crypto.randomUUID(),
   "Sword of Destiny",
