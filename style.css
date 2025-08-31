@@ -49,8 +49,8 @@ body {
 .switch {
   position: relative;
   display: inline-block;
-  width: 2em;
-  height: 1em;
+  width: 2.4em;
+  height: 1.4em;
 }
 
 /* Hide default HTML checkbox */
@@ -76,8 +76,8 @@ body {
 .slider:before {
   position: absolute;
   content: "";
-  height: 0.8em;
-  width: 0.8em;
+  height: 1.2em;
+  width: 1.2em;
   left: 2px;
   bottom: 2px;
   background-color: white;
@@ -116,6 +116,8 @@ h2 {
 
   grid-row: 2/3;
   grid-column: 1/2;
+  height: 100%;
+  padding: 1em;
 .content {
   grid-row: 2/3;
   grid-column: 2/3;
