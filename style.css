@@ -149,3 +149,17 @@ legend {
   grid-column: 2/3;
   padding: 1.6em;
 }
+
+#readStat {
+  display: flex;
+  flex-direction: row;
+}
+
+#bookStat {
+  border: 1px solid black;
+  width: 4.2em;
+  text-align: center;
+  margin-left: 1em;
+  border-radius: 0.6em;
+}
+
