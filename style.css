@@ -132,6 +132,9 @@ legend {
   flex-direction: column;
 }
 
+.inputEntry {
+  padding: 1em 0.6em;
+}
 .content {
   grid-row: 2/3;
   grid-column: 2/3;
