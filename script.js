@@ -69,6 +69,9 @@ const book3 = new Book(
   "unread",
 );
 
+addBookToLibrary(book1);
+addBookToLibrary(book2);
+addBookToLibrary(book3);
 
 /* Test code for appending new element to "content"*/
 let content = document.getElementsByClassName("content");
