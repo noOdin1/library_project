@@ -114,6 +114,14 @@ h2 {
   margin: 0.5em;
 }
 
+fieldset {
+  border-radius: 0.5em;
+}
+
+legend {
+  margin-left: 0.6em;
+}
+
   grid-row: 2/3;
   grid-column: 1/2;
   height: 100%;
