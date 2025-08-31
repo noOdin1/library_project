@@ -140,8 +140,25 @@ form.addEventListener("submit", function (e) {
   // }
 
   e.preventDefault();
+
   const data = new FormData(form);
+  let tmpBook = new Book();
+  tmpBook.uuid = self.crypto.randomUUID();
   for (const [name, value] of data) {
     console.log(name, ":", value);
+    if (name == "title") {
+      tmpBook.title = value;
+    }
+    if (name == "author") {
+      tmpBook.author = value;
+    }
+    if (name == "pages") {
+      tmpBook.pages = value;
+    }
+    if (name == "checkbox") {
+      tmpBook.status = value;
+    }
   }
+  addBookToLibrary(tmpBook);
+  form.reset();
 });
