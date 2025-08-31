@@ -135,6 +135,15 @@ legend {
 .inputEntry {
   padding: 1em 0.6em;
 }
+
+.textInput {
+  height: 1.8em;
+  width: 100%;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border-radius: 0.6em;
+}
+
 .content {
   grid-row: 2/3;
   grid-column: 2/3;
