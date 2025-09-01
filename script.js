@@ -116,6 +116,8 @@ function displayInfo() {
     child = content[0].lastElementChild;
   }
 
+  myLibrary.forEach((bookEntry) => {
+    let libCard = createCardDiv(bookEntry);
     content[0].appendChild(libCard);
   });
 }
