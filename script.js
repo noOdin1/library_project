@@ -30,6 +30,8 @@ function Book(uuid, title, author, pages, status) {
   };
 }
 
+const bookInfoElements = ["uuid", "title", "author", "pages", "status"];
+
 function addBookToLibrary(book) {
   myLibrary.push(book);
 
