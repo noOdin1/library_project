@@ -63,6 +63,17 @@ const book3 = new Book(
   "Unread",
 );
 
+function createCardDiv(bookInfo) {
+  let libCard = document.createElement("div");
+  libCard.classList.add("libraryCard");
+
+  libCard.append(tmpDiv);
+
+  console.log(libCard);
+
+  return libCard;
+}
+
 function displayInfo() {
   let content = document.getElementsByClassName("content");
 
