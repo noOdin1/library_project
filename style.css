@@ -195,7 +195,15 @@ legend {
   justify-content: space-evenly;
 }
 
+.cardRow {
+  display: flex;
+  flex-direction: row;
   word-break: break-all;
+  padding: 0.25em;
+  /* justify-content: space-around; */
+  /* column-gap: 1em; */
+}
+
 .cardRow > .infoLabel {
   width: 25%;
   /* margin-right: 1em; */
