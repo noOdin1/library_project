@@ -107,6 +107,17 @@ function createCardDiv(bookInfo) {
 
 function removeCard(event) {
   console.log("[removeCard] id: " + event.target.id);
+
+  let pos = 0;
+
+  for (; pos < myLibrary.length; pos++) {
+    if (myLibrary[pos].uuid == event.target.id) {
+      break;
+    }
+  }
+  console.log(`[removeCard] item found in position ${pos}`);
+  myLibrary.splice(pos, 1);
+  displayInfo();
 }
 
 function displayInfo() {
