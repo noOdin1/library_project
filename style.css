@@ -199,6 +199,14 @@ legend {
 
 .libraryCard > p {
   padding: 0.15em;
+.cardRow > .infoLabel {
+  width: 25%;
+  /* margin-right: 1em; */
+}
+
+.cardRow > .infoValue {
+  width: 72%;
+}
 
 button {
   font-size: 1rem;
