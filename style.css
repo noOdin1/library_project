@@ -158,6 +158,7 @@ legend {
   gap: 1.6em;
   /* The following will add a gap between the rows */
   row-gap: 1.6em;
+  overflow: auto;
 }
 
 #readStat {
