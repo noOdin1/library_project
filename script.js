@@ -61,6 +61,9 @@ const book3 = new Book(
   "Unread",
 );
 
+function displayInfo() {
+}
+
 addBookToLibrary(book1);
 addBookToLibrary(book2);
 addBookToLibrary(book3);
