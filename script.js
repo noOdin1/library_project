@@ -186,7 +186,10 @@ form.addEventListener("submit", function (e) {
     }
   }
   addBookToLibrary(tmpBook);
+  displayInfo();
   form.reset();
+  let para = document.getElementById("bookStat");
+  para.textContent = "Unread";
 });
 
 displayInfo();
