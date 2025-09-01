@@ -169,3 +169,19 @@ legend {
 #addBook {
   font-size: 1rem;
 }
+
+.libraryCard {
+  padding: 0.5em;
+  height: 23%;
+  width: 30%;
+  background-color: white;
+  /* border: 1px solid black; */
+  border-radius: 1em;
+  border-left: 0.5em solid yellow;
+  box-shadow: 0.2em 0.2em 0.1em black;
+  /* width: clamp(180px, 33%, 280px); */
+}
+
+.libraryCard > p {
+  padding: 0.15em;
+}
