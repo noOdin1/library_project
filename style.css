@@ -168,10 +168,6 @@ legend {
   border-radius: 0.6em;
 }
 
-#addBook {
-  font-size: 1rem;
-}
-
 .libraryCard {
   padding: 0.5em;
   height: 23%;
@@ -186,4 +182,7 @@ legend {
 
 .libraryCard > p {
   padding: 0.15em;
+
+button {
+  font-size: 1rem;
 }
