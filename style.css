@@ -130,6 +130,7 @@ legend {
   /* background-color: #ff822e; */
   display: flex;
   flex-direction: column;
+  border: 1px solid MediumVioletRed;
 }
 
 .inputEntry {
@@ -148,6 +149,7 @@ legend {
   grid-row: 2/3;
   grid-column: 2/3;
   padding: 1.6em;
+  border: 1px solid MediumVioletRed;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
