@@ -105,10 +105,13 @@ function createCardDiv(bookInfo) {
   return libCard;
 }
 
+function removeCard(event) {
+  console.log("[removeCard] id: " + event.target.id);
+}
+
 function displayInfo() {
   let content = document.getElementsByClassName("content");
 
-    console.log(bookEntry);
   let child = content[0].lastElementChild;
 
   while (child) {
