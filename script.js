@@ -42,7 +42,7 @@ function addBookToLibrary(book) {
 const book1 = new Book(
   self.crypto.randomUUID(),
   "The Lord of the Rings",
-  "Tolkien",
+  "J.R.R. Tolkien",
   1216,
   "Read",
 );
@@ -50,7 +50,7 @@ const book1 = new Book(
 const book2 = new Book(
   self.crypto.randomUUID(),
   "The Lost Symbol",
-  "Brown",
+  "Dan Brown",
   624,
   "Read",
 );
@@ -58,7 +58,7 @@ const book2 = new Book(
 const book3 = new Book(
   self.crypto.randomUUID(),
   "Sword of Destiny",
-  "Sapkowski",
+  "Andrzej Sapkowski",
   416,
   "Unread",
 );
