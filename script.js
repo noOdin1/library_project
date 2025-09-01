@@ -109,7 +109,12 @@ function displayInfo() {
   let content = document.getElementsByClassName("content");
 
     console.log(bookEntry);
+  let child = content[0].lastElementChild;
 
+  while (child) {
+    content[0].removeChild(child);
+    child = content[0].lastElementChild;
+  }
 
     content[0].appendChild(libCard);
   });
