@@ -67,6 +67,37 @@ function createCardDiv(bookInfo) {
   let libCard = document.createElement("div");
   libCard.classList.add("libraryCard");
 
+  bookInfoElements.forEach((infoElements) => {
+    let tmpDiv = document.createElement("div");
+    tmpDiv.classList.add("cardRow");
+    tmpDiv.classList.add(infoElements);
+    let lbl = document.createElement("p");
+    lbl.classList.add("infoLabel");
+    lbl.textContent = infoElements + ": ";
+    let val = document.createElement("p");
+    val.classList.add("infoValue");
+    val.textContent = bookInfo[infoElements];
+    tmpDiv.appendChild(lbl);
+    tmpDiv.appendChild(val);
+
+    libCard.appendChild(tmpDiv);
+  });
+  let tmpDiv = document.createElement("div");
+  tmpDiv.classList.add("cardRow");
+  tmpDiv.classList.add("buttonRow");
+
+  let emptyLbl = document.createElement("p");
+  emptyLbl.textContent = " ";
+  emptyLbl.classList.add("infoLabel");
+  const tmpBtn = document.createElement("button");
+  tmpBtn.textContent = "Remove";
+  tmpBtn.classList.add("button");
+  tmpBtn.classList.add("infoValue");
+  tmpBtn.setAttribute("id", bookInfo["uuid"]);
+  tmpBtn.addEventListener("click", removeCard);
+  tmpDiv.appendChild(emptyLbl);
+  tmpDiv.appendChild(tmpBtn);
+
   libCard.append(tmpDiv);
 
   console.log(libCard);
