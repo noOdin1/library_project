@@ -116,6 +116,7 @@ h2 {
 
 fieldset {
   border-radius: 0.5em;
+  border: 2px solid #00303b;
 }
 
 legend {
