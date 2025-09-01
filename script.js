@@ -63,6 +63,30 @@ const book3 = new Book(
   "Unread",
 );
 
+const book4 = new Book(
+  self.crypto.randomUUID(),
+  "Angels and Demons",
+  "Dan Brown",
+  396,
+  "Read",
+);
+
+const book5 = new Book(
+  self.crypto.randomUUID(),
+  "Harry Potter",
+  "J.K. Rowling",
+  437,
+  "Unread",
+);
+
+const book6 = new Book(
+  self.crypto.randomUUID(),
+  "Hunger Games Book 1",
+  "Suzanne Collins",
+  362,
+  "Unread",
+);
+
 function createCardDiv(bookInfo) {
   let libCard = document.createElement("div");
   libCard.classList.add("libraryCard");
@@ -139,6 +163,9 @@ function displayInfo() {
 addBookToLibrary(book1);
 addBookToLibrary(book2);
 addBookToLibrary(book3);
+addBookToLibrary(book4);
+addBookToLibrary(book5);
+addBookToLibrary(book6);
 
 let readBook = document.getElementById("bookStat");
 /*
