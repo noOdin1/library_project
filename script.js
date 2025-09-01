@@ -15,14 +15,6 @@ function Book(uuid, title, author, pages, status) {
   this.status = status;
 
   this.info = function () {
-    // console.log(
-    //   "[Book:bookInfo] title: " +
-    //     this.title +
-    //     ", author: " +
-    //     this.author +
-    //     ", pages: " +
-    //     this.pages,
-    // );
     return (
       "uuid: " +
       this.uuid +
@@ -50,7 +42,7 @@ const book1 = new Book(
   "The Lord of the Rings",
   "Tolkien",
   1216,
-  "read",
+  "Read",
 );
 
 const book2 = new Book(
@@ -58,7 +50,7 @@ const book2 = new Book(
   "The Lost Symbol",
   "Brown",
   624,
-  "read",
+  "Read",
 );
 
 const book3 = new Book(
@@ -66,7 +58,7 @@ const book3 = new Book(
   "Sword of Destiny",
   "Sapkowski",
   416,
-  "unread",
+  "Unread",
 );
 
 addBookToLibrary(book1);
@@ -127,18 +119,6 @@ checkbox.addEventListener("change", function () {
  **/
 let form = document.getElementById("addBookForm");
 form.addEventListener("submit", function (e) {
-  // if (document.getElementById("statCheck").checked) {
-  //   document.getElementById("statCheckHidden").disabled = true;
-  //   console.log("[eventListener] checkbox is checked.");
-  //   readBook.textContent = "Read";
-  // }
-  //
-  // if (document.getElementById("statCheck").unchecked) {
-  //   // document.getElementById("statCheckHidden").disabled = false;
-  //   console.log("[eventListener] checkbox is unchecked.");
-  //   readBook.textContent = "Unread";
-  // }
-
   e.preventDefault();
 
   const data = new FormData(form);
