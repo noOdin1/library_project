@@ -66,29 +66,8 @@ const book3 = new Book(
 function displayInfo() {
   let content = document.getElementsByClassName("content");
 
-  myLibrary.forEach((bookEntry) => {
-    // console.log("[displayInfo] bookEntry: " + bookEntry),
     console.log(bookEntry);
 
-    let libCard = document.createElement("div");
-    libCard.classList.add("libraryCard");
-    let bookTitle = document.createElement("p");
-    let bookAuthor = document.createElement("p");
-    let bookPages = document.createElement("p");
-    let bookUuid = document.createElement("p");
-    let bookStatus = document.createElement("p");
-
-    bookUuid.textContent = `uuid: ${bookEntry.uuid}`;
-    bookTitle.textContent = `Title: ${bookEntry.title}`;
-    bookAuthor.textContent = `Author: ${bookEntry.author}`;
-    bookPages.textContent = `Pages: ${bookEntry.pages}`;
-    bookStatus.textContent = `Status: ${bookEntry.status}`;
-
-    libCard.appendChild(bookUuid);
-    libCard.appendChild(bookTitle);
-    libCard.appendChild(bookAuthor);
-    libCard.appendChild(bookPages);
-    libCard.appendChild(bookStatus);
 
     content[0].appendChild(libCard);
   });
