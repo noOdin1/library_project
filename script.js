@@ -62,26 +62,25 @@ const book3 = new Book(
 );
 
 function displayInfo() {
+  let content = document.getElementsByClassName("content");
+    let libCard = document.createElement("div");
+    libCard.classList.add("libraryCard");
+    let bookTitle = document.createElement("p");
+    let bookAuthor = document.createElement("p");
+    let bookPages = document.createElement("p");
+    let bookUuid = document.createElement("p");
+    let bookStatus = document.createElement("p");
+
+    bookUuid.textContent = `uuid: ${bookEntry.uuid}`;
+    bookTitle.textContent = `Title: ${bookEntry.title}`;
+    bookAuthor.textContent = `Author: ${bookEntry.author}`;
+    bookPages.textContent = `Pages: ${bookEntry.pages}`;
+    bookStatus.textContent = `Status: ${bookEntry.status}`;
 }
 
 addBookToLibrary(book1);
 addBookToLibrary(book2);
 addBookToLibrary(book3);
-
-/* Test code for appending new element to "content"*/
-let content = document.getElementsByClassName("content");
-
-let libCard = document.createElement("div");
-libCard.classList.add("libraryCard");
-let bookTitle = document.createElement("p");
-let bookAuthor = document.createElement("p");
-bookTitle.textContent = book1.title;
-bookAuthor.textContent = book1.author;
-
-libCard.appendChild(bookTitle);
-libCard.appendChild(bookAuthor);
-
-content[0].appendChild(libCard);
 
 let readBook = document.getElementById("bookStat");
 /*
