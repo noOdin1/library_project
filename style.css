@@ -148,6 +148,9 @@ legend {
   grid-row: 2/3;
   grid-column: 2/3;
   padding: 1.6em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 #readStat {
