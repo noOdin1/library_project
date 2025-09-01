@@ -152,7 +152,11 @@ legend {
   border: 1px solid MediumVioletRed;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 1.6em;
+  /* The following will add a gap between the rows */
+  row-gap: 1.6em;
 }
 
 #readStat {
