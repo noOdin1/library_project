@@ -228,6 +228,8 @@ button {
   -webkit-transform: translateX(-100%);
 }
 
+/* source solution:  */
+/*   https://stackoverflow.com/questions/71813422/how-would-i-make-a-transition-for-the-div-to-slide-to-the-left-and-come-out-thro  */
 .slide-in {
   animation: slide-in 0.5s forwards;
   -webkit-animation: slide-in 0.5s forwards;
