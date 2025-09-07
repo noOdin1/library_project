@@ -234,7 +234,10 @@ form.addEventListener("submit", function (e) {
 });
 
 function bookFormEvent(event) {
-  console.dir(this);
+  // console.dir(this);
+  var isOpen = formContainer.classList.contains("slide-in");
+
+  formContainer.setAttribute("class", isOpen ? "slide-out" : "slide-in");
   if (this.textContent === "Show Book Form") {
     document.getElementById("addBookBtn").innerHTML = "Hide Book Form";
     return;
