@@ -213,6 +213,13 @@ button {
   margin: 0.6em 0;
 }
 
+#formContainer {
+  position: absolute;
+  margin-top: 2.5em;
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+}
+
 .slide-in {
   animation: slide-in 0.5s forwards;
   -webkit-animation: slide-in 0.5s forwards;
