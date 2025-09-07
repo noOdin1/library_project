@@ -99,15 +99,30 @@ function createCardDiv(bookInfo) {
     let lbl = document.createElement("p");
     lbl.classList.add("infoLabel");
     lbl.textContent = infoElements + ": ";
-    let val = document.createElement("p");
-    val.classList.add("infoValue");
-    val.textContent = bookInfo[infoElements];
+
     // Adding the 'value'/'info' for each card
+    let val = 0;
+    if (infoElements === "status") {
+      // console.log("put button here");
+      val = document.createElement("button");
+      val.textContent = bookInfo[infoElements];
+      val.classList.add("button");
+      val.classList.add("infoValue");
+      val.setAttribute("id", bookInfo["uuid"]);
+
+      val.addEventListener("click", changeBookStat);
+    } else {
+      val = document.createElement("p");
+      val.classList.add("infoValue");
+      val.textContent = bookInfo[infoElements];
+    }
+
     tmpDiv.appendChild(lbl);
     tmpDiv.appendChild(val);
 
     libCard.appendChild(tmpDiv);
   });
+
   let tmpDiv = document.createElement("div");
   tmpDiv.classList.add("cardRow");
   tmpDiv.classList.add("buttonRow");
