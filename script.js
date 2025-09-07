@@ -92,6 +92,7 @@ function createCardDiv(bookInfo) {
   libCard.classList.add("libraryCard");
 
   bookInfoElements.forEach((infoElements) => {
+    // Adding the labels for each card
     let tmpDiv = document.createElement("div");
     tmpDiv.classList.add("cardRow");
     tmpDiv.classList.add(infoElements);
@@ -101,6 +102,7 @@ function createCardDiv(bookInfo) {
     let val = document.createElement("p");
     val.classList.add("infoValue");
     val.textContent = bookInfo[infoElements];
+    // Adding the 'value'/'info' for each card
     tmpDiv.appendChild(lbl);
     tmpDiv.appendChild(val);
 
