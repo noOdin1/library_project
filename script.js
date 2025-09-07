@@ -245,6 +245,7 @@ function bookFormEvent(event) {
   }
 }
 
+var formContainer = document.getElementById("formContainer");
 let addBookbtn = document.getElementById("addBookBtn");
 addBookBtn.addEventListener("click", bookFormEvent);
 
