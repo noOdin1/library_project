@@ -36,7 +36,7 @@ function addBookToLibrary(book) {
   myLibrary.push(book);
 
   // console.log("[addBookLibrary] ")
-  console.log(myLibrary);
+  // console.log(myLibrary);
 }
 
 const book1 = new Book(
@@ -124,7 +124,7 @@ function createCardDiv(bookInfo) {
 
   libCard.append(tmpDiv);
 
-  console.log(libCard);
+  // console.log(libCard);
 
   return libCard;
 }
@@ -212,7 +212,7 @@ form.addEventListener("submit", function (e) {
   let tmpBook = new Book();
   tmpBook.uuid = self.crypto.randomUUID();
   for (const [name, value] of data) {
-    console.log(name, ":", value);
+    // console.log(name, ":", value);
     if (name == "title") {
       tmpBook.title = value;
     }
