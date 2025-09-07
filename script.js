@@ -146,6 +146,37 @@ function createCardDiv(bookInfo) {
   return libCard;
 }
 
+function changeBookStat(event) {
+  // create a handle for button with matching id
+  let tmpBtn = document.getElementById(event.target.id);
+
+  // Determine if the book has been 'read' or 'unread'
+  if (tmpBtn.innerHTML == "Unread") {
+    tmpBtn.innerHTML = "Read";
+
+    // finding object in array that matches certain criteria
+    //   src: https://stackoverflow.com/questions/12462318/find-a-value-in-an-array-of-objects-in-javascript
+    myLibrary.find((book, index) => {
+      if (book.uuid == event.target.id) {
+        myLibrary[index].status = "Read";
+        console.log(myLibrary[index]);
+      }
+    });
+    return;
+  }
+  if (tmpBtn.innerHTML == "Read") {
+    tmpBtn.innerHTML = "Unread";
+
+    myLibrary.find((book, index) => {
+      if (book.uuid == event.target.id) {
+        myLibrary[index].status = "Unread";
+        console.log(myLibrary[index]);
+      }
+    });
+    return;
+  }
+}
+
 function removeCard(event) {
   console.log("[removeCard] id: " + event.target.id);
 
