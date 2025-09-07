@@ -233,4 +233,19 @@ form.addEventListener("submit", function (e) {
   para.textContent = "Unread";
 });
 
+function bookFormEvent(event) {
+  console.dir(this);
+  if (this.textContent === "Show Book Form") {
+    document.getElementById("addBookBtn").innerHTML = "Hide Book Form";
+    return;
+  }
+  if (this.textContent === "Hide Book Form") {
+    this.innerHTML = "Show Book Form";
+    return;
+  }
+}
+
+let addBookbtn = document.getElementById("addBookBtn");
+addBookBtn.addEventListener("click", bookFormEvent);
+
 displayInfo();
