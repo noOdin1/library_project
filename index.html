@@ -9,62 +9,65 @@
   <body>
     <div class="container">
       <div class="leftBar">
-        <form id="addBookForm" action="" method="post">
-          <fieldset>
-            <legend>New Books</legend>
-            <div class="inputEntry">
-              <label for="booktitle">Book title: </label>
-              <input
-                class="textInput"
-                type="text"
-                id="booktitle"
-                name="title"
-                required
-              />
-            </div>
-            <div class="inputEntry">
-              <label for="bookauthor">Book author: </label>
-              <input
-                class="textInput"
-                type="text"
-                id="bookauthor"
-                name="author"
-                required
-              />
-            </div>
-            <div class="inputEntry">
-              <label for="bookpages">Pages: </label>
-              <input
-                class="textInput"
-                type="text"
-                id="bookpages"
-                name="pages"
-                required
-              />
-            </div>
-            <div id="readStat" class="inputEntry">
-              <label class="switch">
+        <button id="addBookBtn">Show Book Form</button>
+        <div id="formContainer">
+          <form id="addBookForm" action="" method="post">
+            <fieldset>
+              <legend>New Books</legend>
+              <div class="inputEntry">
+                <label for="booktitle">Book title: </label>
                 <input
-                  type="hidden"
-                  id="statCheckHidden"
-                  name="checkbox"
-                  value="Unread"
+                  class="textInput"
+                  type="text"
+                  id="booktitle"
+                  name="title"
+                  required
                 />
+              </div>
+              <div class="inputEntry">
+                <label for="bookauthor">Book author: </label>
                 <input
-                  type="checkbox"
-                  id="statCheck"
-                  name="checkbox"
-                  value="Read"
+                  class="textInput"
+                  type="text"
+                  id="bookauthor"
+                  name="author"
+                  required
                 />
-                <span class="slider round"></span>
-              </label>
-              <p id="bookStat">Unread</p>
-            </div>
-            <div class="inputEntry">
-              <button id="addBook" type="submit">Add Book</button>
-            </div>
-          </fieldset>
-        </form>
+              </div>
+              <div class="inputEntry">
+                <label for="bookpages">Pages: </label>
+                <input
+                  class="textInput"
+                  type="text"
+                  id="bookpages"
+                  name="pages"
+                  required
+                />
+              </div>
+              <div id="readStat" class="inputEntry">
+                <label class="switch">
+                  <input
+                    type="hidden"
+                    id="statCheckHidden"
+                    name="checkbox"
+                    value="Unread"
+                  />
+                  <input
+                    type="checkbox"
+                    id="statCheck"
+                    name="checkbox"
+                    value="Read"
+                  />
+                  <span class="slider round"></span>
+                </label>
+                <p id="bookStat">Unread</p>
+              </div>
+              <div class="inputEntry">
+                <button id="addBook" type="submit">Add Book</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
       </div>
       <div class="topBar">
         <h2>Virtual Library</h2>
