@@ -109,7 +109,7 @@ input:checked + .slider:before {
 }
 /* End of slider definition */
 
-h2 {
+h1 {
   text-align: center;
   margin: 0.5em;
 }
