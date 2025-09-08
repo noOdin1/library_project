@@ -158,7 +158,8 @@ function changeBookStat(event) {
   myLibrary.find((book, index) => {
     if (book.uuid == event.target.id) {
       myLibrary[index].status = toggleVar;
-      console.log(myLibrary[index]);
+      // console.log(myLibrary[index]);
+      console.table(myLibrary[index]);
     }
   });
 
