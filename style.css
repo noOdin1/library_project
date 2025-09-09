@@ -149,6 +149,50 @@ legend {
   padding: 1em 0.6em;
 }
 
+/** Start of client validation **/
+/**
+ * src: https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes
+*/
+/* input.textInput { */
+/*   width: 98%; */
+/* } */
+/**/
+input + span.txtInput {
+  position: relative;
+}
+
+input:required + span.txtInput::after {
+  font-size: 0.7rem;
+  position: absolute;
+  content: "required";
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  top: -26px;
+  left: -70px;
+}
+
+input + span.txtInput::before {
+  position: absolute;
+  right: -0.8em;
+  top: 5;
+}
+
+input:user-invalid {
+  border: 2px solid red;
+}
+
+input:user-invalid + span.txtInput::before {
+  content: "✖";
+  color: red;
+}
+
+input:user-valid + span.txtInput::before {
+  content: "✓";
+  color: green;
+}
+/** End of client validation **/
+
 .textInput {
   height: 1.8em;
   width: 98%;
