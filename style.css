@@ -171,8 +171,14 @@ input:required + span.txtInput::after {
 input + span.txtInput::before {
   position: absolute;
   right: -0.8em;
-  top: 5;
 }
+
+/* Code targetting firefox webbrowser only */
+/* @-moz-document url-prefix() { */
+/*   h1 { */
+/*     color: red; */
+/*   } */
+/* } */
 
 input:user-invalid {
   border: 2px solid red;
