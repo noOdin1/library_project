@@ -284,6 +284,8 @@ form.addEventListener("submit", function (e) {
       tmpBook.status = value;
     }
   }
+  console.log("[submit button]");
+  console.table(tmpBook);
   addBookToLibrary(tmpBook);
   displayInfo();
   form.reset();
