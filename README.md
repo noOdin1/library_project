@@ -26,3 +26,9 @@ Assignment Objectives: <br>
 [done] Remove button added to each card on display <br>
 [done] Removed button, removes the card from display and library array <br>
 [done] Each card has a button that toggle the book status of READ and UNREAD <br>
+<br>
+2025-09-10 05:17<br>
+[done] Visual cues for input text validation<br>
+[done] Correction on number input for number of pages<br>
+[done] Instruction for user on form requirements<br>
+[done] Form reset when it is dismissed<br>
