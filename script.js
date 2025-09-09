@@ -302,6 +302,7 @@ function bookFormEvent(event) {
   }
   if (this.textContent === "Hide Book Form") {
     this.innerHTML = "Show Book Form";
+    form.reset();
     return;
   }
 }
