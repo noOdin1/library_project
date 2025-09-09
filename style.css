@@ -153,10 +153,6 @@ legend {
 /**
  * src: https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes
 */
-/* input.textInput { */
-/*   width: 98%; */
-/* } */
-/**/
 input + span.txtInput {
   position: relative;
 }
