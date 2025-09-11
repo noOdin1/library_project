@@ -116,33 +116,26 @@ const book6 = new Book(
 );
 
 function createCardDiv(bookInfo) {
-  let libCard = document.createElement("div");
-  libCard.classList.add("libraryCard");
+  let libCard = createElement("div", "libraryCard");
 
   bookInfoElements.forEach((infoElements) => {
     // Adding the labels for each card
-    let tmpDiv = document.createElement("div");
-    tmpDiv.classList.add("cardRow");
-    tmpDiv.classList.add(infoElements);
-    let lbl = document.createElement("p");
-    lbl.classList.add("infoLabel");
-    lbl.textContent = infoElements + ": ";
+    let tmpDiv = createElement("div", ["cardRow", infoElements]);
+
+    let lbl = createElement("p", "infoLabel", "", infoElements + ": ");
 
     // Adding the 'value'/'info' for each card
     let val = 0;
     if (infoElements === "status") {
-      // console.log("put button here");
-      val = document.createElement("button");
-      val.textContent = bookInfo[infoElements];
-      val.classList.add("button");
-      val.classList.add("infoValue");
-      val.setAttribute("id", bookInfo["uuid"]);
-
+      val = createElement(
+        "button",
+        ["button", "infoValue"],
+        bookInfo["uuid"],
+        bookInfo[infoElements],
+      );
       val.addEventListener("click", changeBookStat);
     } else {
-      val = document.createElement("p");
-      val.classList.add("infoValue");
-      val.textContent = bookInfo[infoElements];
+      val = createElement("p", "infoValue", "", bookInfo[infoElements]);
     }
 
     tmpDiv.appendChild(lbl);
@@ -151,19 +144,18 @@ function createCardDiv(bookInfo) {
     libCard.appendChild(tmpDiv);
   });
 
-  let tmpDiv = document.createElement("div");
-  tmpDiv.classList.add("cardRow");
-  tmpDiv.classList.add("buttonRow");
+  let tmpDiv = createElement("div", ["cardRow", "buttonRow"]);
 
-  let emptyLbl = document.createElement("p");
-  emptyLbl.textContent = " ";
-  emptyLbl.classList.add("infoLabel");
-  const tmpBtn = document.createElement("button");
-  tmpBtn.textContent = "Remove";
-  tmpBtn.classList.add("button");
-  tmpBtn.classList.add("infoValue");
-  tmpBtn.setAttribute("id", bookInfo["uuid"]);
+  let emptyLbl = createElement("p", "infoLabel", "", " ");
+
+  const tmpBtn = createElement(
+    "button",
+    ["infoValue"],
+    bookInfo["uuid"],
+    "Remove",
+  );
   tmpBtn.addEventListener("click", removeCard);
+
   tmpDiv.appendChild(emptyLbl);
   tmpDiv.appendChild(tmpBtn);
 
