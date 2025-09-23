@@ -32,3 +32,10 @@ Assignment Objectives: <br>
 [done] Correction on number input for number of pages<br>
 [done] Instruction for user on form requirements<br>
 [done] Form reset when it is dismissed<br>
+
+2025-09-23 23:40<br>
+
+<h2>Revisiting Library Project - Refactor code with class</h2>
+<pre>
+1. New branch created for this repo                     [done]
+</pre>
