@@ -38,4 +38,19 @@ Assignment Objectives: <br>
 <h2>Revisiting Library Project - Refactor code with class</h2>
 <pre>
 1. New branch created for this repo                     [done]
+2. Refactor constructor function to Class               [done]
 </pre>
+
+2025-09-25 02:36<br>
+Refactoring the script meant renaming the constructor function<br>
+from "function Book()" to "class Book{}". The way that the code<br>
+was originally written, all the setters/getters need to be coded<br>
+for each of the Book's information/data. The first approach was to <br>
+code only the class constructor, and the getters for each of the<br>
+data or information, and a setter for the book status. Running the code<br>
+with the code shows errors that indicate 'setters' for uuid were not<br>
+present.<br>
+script.js was further updated with the matching getters/setters for each<br>
+of the data/information for Book class. After the code update, the<br>
+console reported no errors, only the console.log appropriate for each<br>
+book addition/removal/update.
