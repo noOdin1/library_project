@@ -2,32 +2,65 @@
 
 const myLibrary = [];
 
-function Book(uuid, title, author, pages, status) {
-  if (!new.target) {
-    throw Error(
-      "[Book] Constructor error. You must use the 'new' operator to call the constructor.",
-    );
+class Book {
+  constructor(uuid, title, author, pages, status) {
+    this.uuid = uuid;
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.status = status;
   }
-  this.uuid = uuid;
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.status = status;
 
-  this.info = function () {
+  get uuid() {
+    return this._uuid;
+  }
+
+  get title() {
+    return this._title;
+  }
+
+  get author() {
+    return this._author;
+  }
+
+  get pages() {
+    return this._pages;
+  }
+
+  get status() {
+    return this._status;
+  }
+
+  get info() {
     return (
       "uuid: " +
-      this.uuid +
+      this._uuid +
       ", title: " +
-      this.title +
+      this._title +
       ", author: " +
-      this.author +
+      this._author +
       ", pages: " +
-      this.pages +
+      this._pages +
       ", status: " +
-      this.status
+      this._status
     );
-  };
+  }
+
+  set uuid(bookUuid) {
+    this._uuid = bookUuid;
+  }
+  set title(bookTitle) {
+    this._title = bookTitle;
+  }
+  set author(bookAuthor) {
+    this._author = bookAuthor;
+  }
+  set pages(bookPages) {
+    this._pages = bookPages;
+  }
+  set status(stat) {
+    this._status = stat;
+  }
 }
 
 const bookInfoElements = ["uuid", "title", "author", "pages", "status"];
