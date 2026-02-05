@@ -54,3 +54,12 @@ script.js was further updated with the matching getters/setters for each<br>
 of the data/information for Book class. After the code update, the<br>
 console reported no errors, only the console.log appropriate for each<br>
 book addition/removal/update.
+
+2026-02-05<br>
+New features to be introduced into this application as per:
+"Form Validation with Javascript", 47% of JS path for The Odin Project.
+
+The new features:
+1) Include customized error messages
+2) Create a fork for this app branch
+3) Optional: Use npm method of production
