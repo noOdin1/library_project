@@ -1,5 +1,6 @@
 /* library_project */
 
+import "./style.css";
 const myLibrary = [];
 
 class Book {
