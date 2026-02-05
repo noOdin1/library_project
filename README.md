@@ -60,6 +60,7 @@ New features to be introduced into this application as per:
 "Form Validation with Javascript", 47% of JS path for The Odin Project.
 
 The new features:
-1) Include customized error messages
-2) Create a fork for this app branch
-3) Optional: Use npm method of production
+
+1. Include customized error messages
+2. Create a fork for this app branch
+3. Optional: Use npm method of production [done]
