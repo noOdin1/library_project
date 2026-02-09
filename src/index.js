@@ -347,6 +347,19 @@ form.addEventListener("submit", function (e) {
   para.textContent = "Unread";
 });
 
+// function to check on all the inputs for the form
+// function inputValidatorCustomError(event) {
+function inputValidatorCustomError() {
+  if (bookTitle.validity.tooShort) {
+    bookTitle.setCustomValidity("Book Title too short");
+    console.log("[inputValidatorCustomError] Book title too short");
+  }
+  if (bookAuthor.validity.tooShort) {
+    bookTitle.setCustomValidity("Book Author too short");
+    console.log("[inputValidatorCustomError] Book author too short");
+  }
+}
+
 function bookFormEvent(event) {
   // console.dir(this);
   var isOpen = formContainer.classList.contains("slide-in");
