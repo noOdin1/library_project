@@ -318,6 +318,7 @@ checkbox.addEventListener("change", function () {
  **/
 let form = document.getElementById("addBookForm");
 form.addEventListener("submit", function (e) {
+  inputValidatorCustomError();
   e.preventDefault();
 
   const data = new FormData(form);
@@ -375,7 +376,6 @@ function bookFormEvent(event) {
     document.getElementById("addBookForm").reset();
     return;
   }
-  inputValidatorCustomError();
 }
 
 let bookTitle = document.getElementById("booktitle");
