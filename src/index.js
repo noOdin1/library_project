@@ -375,6 +375,7 @@ function bookFormEvent(event) {
     document.getElementById("addBookForm").reset();
     return;
   }
+  inputValidatorCustomError();
 }
 
 let bookTitle = document.getElementById("booktitle");
