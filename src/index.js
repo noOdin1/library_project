@@ -350,6 +350,7 @@ form.addEventListener("submit", function (e) {
 
 // function to check on all the inputs for the form
 function inputValidatorCustomError() {
+  let errors = [];
   if (bookTitle.validity.tooShort) {
     bookTitle.setCustomValidity("Book Title too short");
     console.log("[inputValidatorCustomError] Book title too short");
