@@ -352,6 +352,9 @@ form.addEventListener("submit", function (e) {
 function inputValidatorCustomError() {
   let errors = [];
   if (bookTitle.validity.tooShort) {
+    /* This sets the text to be shown to the user when 'submit' button is
+     * pressed.
+     */
     bookTitle.setCustomValidity("Book Title too short");
     console.log("[inputValidatorCustomError] Book title too short");
   }
