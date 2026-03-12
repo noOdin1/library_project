@@ -3,6 +3,27 @@
 import "./style.css";
 const myLibrary = [];
 
+/* Testing out new ideas with IIFE */
+const c = (premsg) => {
+  // private variable, in this project, this will be the function name
+  const msg_prefix = premsg;
+  function out(msg) {
+    console.log(`${msg_prefix} ${msg}`);
+  }
+  function tab(msg) {
+    console.log(`${msg_prefix} Start of table print >>>>>`);
+    console.table(msg);
+    console.log(`${msg_prefix} End of table print   >>>>>`);
+  }
+  function dir(msg) {
+    console.log(`${msg_prefix} Start of object print >>>>`);
+    console.dir(msg);
+    console.log(`${msg_prefix} End of object print   >>>>`);
+  }
+
+  return { out, tab, dir };
+};
+
 class Book {
   constructor(uuid, title, author, pages, status) {
     this.uuid = uuid;
@@ -320,6 +341,8 @@ let form = document.getElementById("addBookForm");
 form.addEventListener("submit", function (e) {
   inputValidatorCustomError();
   e.preventDefault();
+  // console.log("[anonymous function] error array length: " + errorArray.length);
+  cl.out("Line #:342, Error array length");
 
   const data = new FormData(form);
   let tmpBook = new Book();
@@ -339,8 +362,10 @@ form.addEventListener("submit", function (e) {
       tmpBook.status = value;
     }
   }
-  console.log("[submit button]");
-  console.table(tmpBook);
+
+  // cl.out("Line 363: Book info");
+  cl.tab(tmpBook);
+  // console.table(tmpBook);
   addBookToLibrary(tmpBook);
   displayInfo();
   form.reset();
