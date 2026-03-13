@@ -29,12 +29,16 @@ const myLibrary = [];
 function Con(premsg) {
   let prefix = premsg;
 
+  // Function to access private member, prefix
   this.getPreMsg = function () {
     return prefix;
   };
 }
 
 // Adding out method to the PROTOTYPE of con Constructor
+// These functions prototypes are declared outside of the Function Constructor,
+// therefore they don't have access to the private members. That is why the
+// 'getter' function, 'getPreMsg' was added.
 Con.prototype.out = function (msg) {
   let preMsg = this.getPreMsg();
   console.log(`${preMsg} ${msg}`);
