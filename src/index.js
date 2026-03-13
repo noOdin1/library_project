@@ -4,24 +4,54 @@ import "./style.css";
 const myLibrary = [];
 
 /* Testing out new ideas with IIFE */
-const c = (premsg) => {
-  // private variable, in this project, this will be the function name
-  const msg_prefix = premsg;
-  function out(msg) {
-    console.log(`${msg_prefix} ${msg}`);
-  }
-  function tab(msg) {
-    console.log(`${msg_prefix} Start of table print >>>>>`);
-    console.table(msg);
-    console.log(`${msg_prefix} End of table print   >>>>>`);
-  }
-  function dir(msg) {
-    console.log(`${msg_prefix} Start of object print >>>>`);
-    console.dir(msg);
-    console.log(`${msg_prefix} End of object print   >>>>`);
-  }
+// This method has been replaced with the prototypal constructor
+// The latter method my preferred method for implementing JavaScript Classes.
+// const c = (premsg) => {
+//   const msg_prefix = premsg;
+//   function out(msg) {
+//     console.log(`${msg_prefix} ${msg}`);
+//   }
+//   function tab(msg) {
+//     console.log(`${msg_prefix} Start of table print >>>>>`);
+//     console.table(msg);
+//     console.log(`${msg_prefix} End of table print   >>>>>`);
+//   }
+//   function dir(msg) {
+//     console.log(`${msg_prefix} Start of object print >>>>`);
+//     console.dir(msg);
+//     console.log(`${msg_prefix} End of object print   >>>>`);
+//   }
+//
+//   return { out, tab, dir };
+// };
 
-  return { out, tab, dir };
+// Constructor function
+function Con(premsg) {
+  let prefix = premsg;
+
+  this.getPreMsg = function () {
+    return prefix;
+  };
+}
+
+// Adding out method to the PROTOTYPE of con Constructor
+Con.prototype.out = function (msg) {
+  let preMsg = this.getPreMsg();
+  console.log(`${preMsg} ${msg}`);
+};
+
+Con.prototype.tab = function (msg) {
+  let preMsg = this.getPreMsg();
+  console.log(`${preMsg} Start of table print >>>>>`);
+  console.table(msg);
+  console.log(`${preMsg} End of table print   >>>>>`);
+};
+
+Con.prototype.dir = function (msg) {
+  let preMsg = this.getPreMsg();
+  console.log(`${preMsg} Start of object print >>>>`);
+  console.dir(msg);
+  console.log(`${preMsg} End of object print   >>>>`);
 };
 
 class Book {
@@ -339,7 +369,17 @@ checkbox.addEventListener("change", function () {
  **/
 let form = document.getElementById("addBookForm");
 form.addEventListener("submit", function (e) {
-  inputValidatorCustomError();
+  let errorArray = [];
+  const cl = new Con("[form submit]");
+
+  errorArray.push(inputValidatorCustomError(errorArray));
+  /*
+   * e.preventDefault will prevent the form from submitting.
+   * If no errors detected then the form will submit(post action), if not
+   * then e.preventDefault will stop the submit process.
+   * The original condition for this project was to stop the form from performing
+   * 'submit' process. The process is handled here in this function.
+   */
   e.preventDefault();
   // console.log("[anonymous function] error array length: " + errorArray.length);
   cl.out("Line #:342, Error array length");
