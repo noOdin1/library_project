@@ -29,7 +29,7 @@ const myLibrary = [];
 function Con(premsg) {
   let prefix = premsg;
 
-  // Function to access private member, prefix
+  // Getter function to access private member, prefix
   this.getPreMsg = function () {
     return prefix;
   };
@@ -39,6 +39,8 @@ function Con(premsg) {
 // These functions prototypes are declared outside of the Function Constructor,
 // therefore they don't have access to the private members. That is why the
 // 'getter' function, 'getPreMsg' was added.
+// src:
+//   https://stackoverflow.com/questions/436120/accessing-private-member-variables-from-prototype-defined-functions
 Con.prototype.out = function (msg) {
   let preMsg = this.getPreMsg();
   console.log(`${preMsg} ${msg}`);
