@@ -165,6 +165,14 @@ const valueOf = (bookItem, key) => {
   }
 };
 
+// Sample data
+const book1 = new Book("The Lord of the Rings", "J.R.R. Tolkien", 1216, "Read");
+const book2 = new Book("The Lost Symbol", "Dan Brown", 624, "Read");
+const book3 = new Book("Sword of Destiny", "Andrzej Sapkowski", 416, "Unread");
+const book4 = new Book("Angels and Demons", "Dan Brown", 396, "Read");
+const book5 = new Book("Harry Potter", "J.K. Rowling", 437, "Unread");
+const book6 = new Book("Hunger Games Book 1", "Suzanne Collins", 362, "Unread");
+
 function addBookToLibrary(book) {
   myLibrary.push(book);
 
@@ -198,18 +206,6 @@ function createElement(elemType, class_list, unique_id, text_content) {
 
   return element;
 }
-
-const book1 = new Book("The Lord of the Rings", "J.R.R. Tolkien", 1216, "Read");
-
-const book2 = new Book("The Lost Symbol", "Dan Brown", 624, "Read");
-
-const book3 = new Book("Sword of Destiny", "Andrzej Sapkowski", 416, "Unread");
-
-const book4 = new Book("Angels and Demons", "Dan Brown", 396, "Read");
-
-const book5 = new Book("Harry Potter", "J.K. Rowling", 437, "Unread");
-
-const book6 = new Book("Hunger Games Book 1", "Suzanne Collins", 362, "Unread");
 
 function createCardDiv(bookInfo) {
   let libCard = createElement("div", "libraryCard");
