@@ -244,7 +244,6 @@ function createCardDiv(bookInfo) {
   const tmpBtn = createElement(
     "button",
     ["infoValue"],
-    // bookInfo["uuid"],
     bookInfo.get_uuid(),
     "Remove",
   );
