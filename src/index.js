@@ -277,7 +277,7 @@ function changeBookStat(event) {
   // finding object in array that matches certain criteria
   //   src: https://stackoverflow.com/questions/12462318/find-a-value-in-an-array-of-objects-in-javascript
   myLibrary.find((book, index) => {
-    if (book.uuid == event.target.id) {
+    if (book.get_uuid() == event.target.id) {
       myLibrary[index].status = toggleVar;
       console.table(myLibrary[index]);
     }
@@ -314,7 +314,8 @@ function removeCard(event) {
   let pos = 0;
 
   for (; pos < myLibrary.length; pos++) {
-    if (myLibrary[pos].uuid == event.target.id) {
+    let tmpItem = myLibrary[pos];
+    if (tmpItem.get_uuid() == event.target.id) {
       break;
     }
   }
