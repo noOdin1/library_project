@@ -168,8 +168,7 @@ const valueOf = (bookItem, key) => {
 function addBookToLibrary(book) {
   myLibrary.push(book);
 
-  // console.log("[addBookLibrary] ")
-  // console.log(myLibrary);
+  // console.log("[addBookLibrary] " + book.get_title());
 }
 
 function createElement(elemType, class_list, unique_id, text_content) {
