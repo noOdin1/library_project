@@ -62,5 +62,9 @@ New features to be introduced into this application as per:
 The new features:
 
 1. Include customized error messages
-2. Create a fork for this app branch
-3. Optional: Use npm method of production [done]
+2. [done] Create a fork for this app branch
+3. [done] Optional: Use npm method of production
+4. [done] Reexamine the Book class and rewrite it
+5. [done] Introduce private field/variables to Book class
+6. [done] Introduce static field/variables to Book class
+7. [done] Introduce static methods to Book class
