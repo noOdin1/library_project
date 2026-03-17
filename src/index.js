@@ -73,6 +73,17 @@ class Book {
     this.author = author;
     this.pages = pages;
     this.status = status;
+    Book.incrementBookCount();
+  }
+  // Field and methods to keep count of how many books were processed
+  static bookCount = 0;
+
+  static incrementBookCount = () => {
+    Book.bookCount += 1;
+  };
+
+  static get_book_count() {
+    return Book.bookCount;
   }
 
   get_new_uuid() {
@@ -226,7 +237,9 @@ function createCardDiv(bookInfo) {
 
   libCard.append(tmpDiv);
 
-  // console.log(libCard);
+  console.log(
+    "[createCardDiv] Number of books processed: " + Book.get_book_count(),
+  );
 
   return libCard;
 }
