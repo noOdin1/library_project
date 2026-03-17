@@ -227,12 +227,13 @@ function createCardDiv(bookInfo) {
       val = createElement(
         "button",
         ["button", "infoValue"],
-        bookInfo["uuid"],
-        bookInfo[infoElements],
+        bookInfo.get_uuid(),
+        bookInfo.get_status(),
       );
       val.addEventListener("click", changeBookStat);
     } else {
-      val = createElement("p", "infoValue", "", bookInfo[infoElements]);
+      let tmpInfo = valueOf(bookInfo, infoElements);
+      val = createElement("p", "infoValue", "", tmpInfo);
     }
 
     tmpDiv.appendChild(lbl);
@@ -248,7 +249,8 @@ function createCardDiv(bookInfo) {
   const tmpBtn = createElement(
     "button",
     ["infoValue"],
-    bookInfo["uuid"],
+    // bookInfo["uuid"],
+    bookInfo.get_uuid(),
     "Remove",
   );
   tmpBtn.addEventListener("click", removeCard);
