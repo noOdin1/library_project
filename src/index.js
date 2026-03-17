@@ -79,38 +79,38 @@ class Book {
     return self.crypto.randomUUID();
   }
 
-  get uuid() {
+  get_uuid() {
     return this._uuid;
   }
 
-  get title() {
+  get_title() {
     return this._title;
   }
 
-  get author() {
+  get_author() {
     return this._author;
   }
 
-  get pages() {
+  get_pages() {
     return this._pages;
   }
 
-  get status() {
+  get_status() {
     return this._status;
   }
 
   get info() {
     return (
       "uuid: " +
-      this._uuid +
+      this.uuid() +
       ", title: " +
-      this._title +
+      this.title() +
       ", author: " +
-      this._author +
+      this.author() +
       ", pages: " +
-      this._pages +
+      this.pages() +
       ", status: " +
-      this._status
+      this.status()
     );
   }
 
