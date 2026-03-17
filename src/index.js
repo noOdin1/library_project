@@ -144,6 +144,27 @@ class Book {
 
 const bookInfoElements = ["uuid", "title", "author", "pages", "status"];
 
+const valueOf = (bookItem, key) => {
+  // Making sure that bookItem is an instance of "Book" class
+  if (!(Object.getPrototypeOf(bookItem) === Book.prototype)) {
+    return;
+  }
+  switch (key) {
+    case "uuid":
+      return bookItem.get_uuid();
+    case "title":
+      return bookItem.get_title();
+    case "author":
+      return bookItem.get_author();
+    case "pages":
+      return bookItem.get_pages();
+    case "status":
+      return bookItem.get_status();
+    default:
+      return "";
+  }
+};
+
 function addBookToLibrary(book) {
   myLibrary.push(book);
 
