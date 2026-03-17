@@ -402,21 +402,25 @@ form.addEventListener("submit", function (e) {
   cl.out("Line #:342, Error array length");
 
   const data = new FormData(form);
-  let tmpBook = new Book();
+  let tmpTitle;
+  let tmpAuthor;
+  let tmpPages;
+  let tmpStat;
   for (const [name, value] of data) {
     if (name == "title") {
-      tmpBook.title = value;
+      tmpTitle = value;
     }
     if (name == "author") {
-      tmpBook.author = value;
+      tmpAuthor = value;
     }
     if (name == "pages") {
-      tmpBook.pages = value;
+      tmpPages = value;
     }
     if (name == "checkbox") {
-      tmpBook.status = value;
+      tmpStat = value;
     }
   }
+  let tmpBook = new Book(tmpTitle, tmpAuthor, tmpPages, tmpStat);
 
   // cl.out("Line 363: Book info");
   cl.tab(tmpBook);
