@@ -1,7 +1,7 @@
 /* library_project */
 
 import "./style.css";
-const myLibrary = [];
+// const myLibrary = [];
 
 /* Testing out new ideas with IIFE */
 // This method has been replaced with the prototypal constructor
@@ -158,13 +158,22 @@ const valueOf = (bookItem, key) => {
   }
 };
 
+const myLibrary = [
+  new Book("The Lord of the Rings", "J.R.R. Tolkien", 1216, "Read"),
+  new Book("The Lost Symbol", "Dan Brown", 624, "Read"),
+  new Book("Sword of Destiny", "Andrzej Sapkowski", 416, "Unread"),
+  new Book("Angels and Demons", "Dan Brown", 396, "Read"),
+  new Book("Harry Potter", "J.K. Rowling", 437, "Unread"),
+  new Book("Hunger Games Book 1", "Suzanne Collins", 362, "Unread"),
+];
+
 // Sample data
-const book1 = new Book("The Lord of the Rings", "J.R.R. Tolkien", 1216, "Read");
-const book2 = new Book("The Lost Symbol", "Dan Brown", 624, "Read");
-const book3 = new Book("Sword of Destiny", "Andrzej Sapkowski", 416, "Unread");
-const book4 = new Book("Angels and Demons", "Dan Brown", 396, "Read");
-const book5 = new Book("Harry Potter", "J.K. Rowling", 437, "Unread");
-const book6 = new Book("Hunger Games Book 1", "Suzanne Collins", 362, "Unread");
+// const book1 = new Book("The Lord of the Rings", "J.R.R. Tolkien", 1216, "Read");
+// const book2 = new Book("The Lost Symbol", "Dan Brown", 624, "Read");
+// const book3 = new Book("Sword of Destiny", "Andrzej Sapkowski", 416, "Unread");
+// const book4 = new Book("Angels and Demons", "Dan Brown", 396, "Read");
+// const book5 = new Book("Harry Potter", "J.K. Rowling", 437, "Unread");
+// const book6 = new Book("Hunger Games Book 1", "Suzanne Collins", 362, "Unread");
 
 function addBookToLibrary(book) {
   myLibrary.push(book);
@@ -326,13 +335,6 @@ function displayInfo() {
     content[0].appendChild(libCard);
   });
 }
-
-addBookToLibrary(book1);
-addBookToLibrary(book2);
-addBookToLibrary(book3);
-addBookToLibrary(book4);
-addBookToLibrary(book5);
-addBookToLibrary(book6);
 
 let readBook = document.getElementById("bookStat");
 /*
