@@ -526,8 +526,6 @@ function bookFormEvent(event) {
   }
 }
 
-let bookTitle = document.getElementById("booktitle");
-let bookAuthor = document.getElementById("bookauthor");
 // bookTitle.addEventListener("click", inputValidatorCustomError);
 // bookAuthor.addEventListener("click", inputValidatorCustomError);
 
