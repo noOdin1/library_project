@@ -365,6 +365,87 @@ checkbox.addEventListener("change", function () {
   }
 });
 
+const validation = {
+  // custom validation function
+  text_input(obj, msg) {
+    let CHECKTYPE = {
+      BADINPUT: true,
+      CUSTOMERROR: true,
+      PATTERNMISMATCH: true,
+      RANGEOVERFLOW: true,
+      RANGEUNDERFLOW: true,
+      STEPMISMATCH: true,
+      TOOLONG: true,
+      TOOSHORT: true,
+      TYPEMISMATCH: true,
+      VALUEMISSING: true,
+      VALID: true,
+    };
+    let retValue = false;
+    // HTMLInputElement could be a button, text area, text field, checkbox etc..
+    // So, the type is checked against "text" to make sure that this function is
+    // checking validity against a text box.
+    // Latest bug, unable to test for number input. This was corrected with the
+    // addition of:
+    //   obj.type == "number"
+    // The number of pages is of input type of 'number'
+    if (
+      Object.getPrototypeOf(obj) === HTMLInputElement.prototype &&
+      (obj.type == "text" || obj.type == "number")
+    ) {
+      const inputValidity = obj.validity;
+      if (
+        inputValidity.badInput &&
+        validation.text_input.CHECKTYPE["BADINPUT"]
+      ) {
+        console.log(
+          `Input string for ${msg} could not be converted from a string to a number`,
+        );
+      }
+      if (inputValidity.customError && CHECKTYPE["CUSTOMERROR"]) {
+        console.log(`There is no custom message set for ${msg}`);
+      }
+      if (inputValidity.patternMismatch && CHECKTYPE["PATTERNMISMATCH"]) {
+        console.log(`Input string for ${msg} does not match pattern`);
+      }
+      if (inputValidity.rangeOverflow && CHECKTYPE["RANGEOVERFLOW"]) {
+        console.log(
+          `Input string for ${msg} is too long, value greater than max attribute`,
+        );
+      }
+      if (inputValidity.rangeUnderflow && CHECKTYPE["RANGEUNDERFLOW"]) {
+        console.log(
+          `Input string for ${msg} is too short, value less than min attribute`,
+        );
+      }
+      if (inputValidity.stepMismatch && CHECKTYPE["STEPMISMATCH"]) {
+        console.log(
+          `Input string for ${msg} does not conform to the step attribute`,
+        );
+      }
+      // if (inputValidity.tooLong && validation.text_input.CHECKTYPE[TOOLONG]) {
+      if (inputValidity.tooLong && CHECKTYPE["TOOLONG"]) {
+        console.log(`Input string for ${msg} exceeds the maxlength`);
+      }
+      // if (inputValidity.tooShort && validation.text_input.CHECKTYPE[TOOSHORT]) {
+      if (inputValidity.tooShort && CHECKTYPE["TOOSHORT"]) {
+        console.log(`Input string for ${msg} is less than the minlength`);
+      }
+      if (inputValidity.typeMismatch && CHECKTYPE["TYPEMISMATCH"]) {
+        console.log(`Input string for ${msg} is not the correct format`);
+      }
+      if (inputValidity.valueMissing && CHECKTYPE["VALUEMISSING"]) {
+        console.log(`Input string for ${msg} is missing`);
+      }
+      if (inputValidity.valid && CHECKTYPE["VALID"]) {
+        console.log(`Input string for ${msg} is valid`);
+        retValue = true;
+      }
+    }
+    return retValue;
+  },
+};
+
 /* source: https://stackoverflow.com/questions/10955745/get-values-from-submitted-form
  * NOTE: The solution pointed out above does solve the problem of missing data from
  *       checkbox, if the checkbox weren't 'checked'. But this would not solve the
