@@ -46,18 +46,18 @@ Con.prototype.out = function (msg) {
   console.log(`${preMsg} ${msg}`);
 };
 
-Con.prototype.tab = function (msg) {
+Con.prototype.tab = function (msg, extra = "<empty>") {
   let preMsg = this.getPreMsg();
-  console.log(`${preMsg} Start of table print >>>>>`);
+  console.log(`${preMsg} ${extra} Start of table print >>>>>`);
   console.table(msg);
-  console.log(`${preMsg} End of table print   >>>>>`);
+  // console.log(`${preMsg} ${extra} End of table print   >>>>>`);
 };
 
-Con.prototype.dir = function (msg) {
+Con.prototype.dir = function (msg, extra = "<empty>") {
   let preMsg = this.getPreMsg();
-  console.log(`${preMsg} Start of object print >>>>`);
+  console.log(`${preMsg} ${extra} Start of object print >>>>`);
   console.dir(msg);
-  console.log(`${preMsg} End of object print   >>>>`);
+  // console.log(`${preMsg} ${extra} End of object print   >>>>`);
 };
 
 /**
