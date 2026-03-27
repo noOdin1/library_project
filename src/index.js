@@ -456,10 +456,6 @@ const validation = {
  **/
 let form = document.getElementById("addBookForm");
 form.addEventListener("submit", function (e) {
-  let errorArray = [];
-  const cl = new Con("[form submit]");
-
-  errorArray.push(inputValidatorCustomError(errorArray));
   /*
    * e.preventDefault will prevent the form from submitting.
    * If no errors detected then the form will submit(post action), if not
@@ -468,8 +464,6 @@ form.addEventListener("submit", function (e) {
    * 'submit' process. The process is handled here in this function.
    */
   e.preventDefault();
-  // console.log("[anonymous function] error array length: " + errorArray.length);
-  cl.out("Line #:342, Error array length");
 
   const data = new FormData(form);
   let tmpTitle;
@@ -492,9 +486,6 @@ form.addEventListener("submit", function (e) {
   }
   let tmpBook = new Book(tmpTitle, tmpAuthor, tmpPages, tmpStat);
 
-  // cl.out("Line 363: Book info");
-  cl.tab(tmpBook);
-  // console.table(tmpBook);
   addBookToLibrary(tmpBook);
   displayInfo();
   form.reset();
