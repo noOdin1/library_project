@@ -499,6 +499,12 @@ form.addEventListener("submit", function (e) {
   let errorStr = "";
   let validator = validation();
 
+  if (tmpErrorSection.hasChildNodes()) {
+    console.log("Error messages detected");
+    removeAllChildElemById(tmpErrorSection);
+    tmpErrorSection.classList.remove("errors_detected");
+  }
+
   const data = new FormData(form);
   let tmpTitle;
   let tmpAuthor;
