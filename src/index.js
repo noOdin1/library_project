@@ -462,9 +462,9 @@ const validation = (errorField) => ({
         console.log(tmpStr);
       }
     }
-    return retValue;
+    return tmpStr;
   },
-};
+});
 
 /* source: https://stackoverflow.com/questions/10955745/get-values-from-submitted-form
  * NOTE: The solution pointed out above does solve the problem of missing data from
