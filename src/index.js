@@ -376,7 +376,7 @@ checkbox.addEventListener("change", function () {
   }
 });
 
-const validation = {
+const validation = (errorField) => ({
   // custom validation function
   text_input(obj, msg) {
     let CHECKTYPE = {
