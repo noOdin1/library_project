@@ -497,6 +497,8 @@ form.addEventListener("submit", function (e) {
   //         4. Determine when the code will proceed after checking for input errors
   let tmpErrorSection = document.getElementById("errorMsgSection");
   let errorStr = "";
+  let validator = validation();
+
   const data = new FormData(form);
   let tmpTitle;
   let tmpAuthor;
