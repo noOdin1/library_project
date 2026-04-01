@@ -527,6 +527,17 @@ form.addEventListener("submit", function (e) {
     bookAuthorError !== "" ||
     bookPagesError !== ""
   ) {
+    console.log(
+      "[form submit] Error detected, please correct before continuing...",
+    );
+    // Display the errors here
+    let tmpErrorSectionHeading = createElement(
+      "p",
+      ["error", "heading"],
+      "errorSectionHeading",
+      "Errors detected, please rectify the inputs",
+    );
+    // cl.dir(bookPagesError);
   }
 
   const data = new FormData(form);
