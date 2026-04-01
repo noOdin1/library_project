@@ -1,4 +1,8 @@
 /* library_project */
+import {
+  removeAllChildElemByClass,
+  removeAllChildElemById,
+} from "./removeAllChildElem.js";
 
 import "./style.css";
 // const myLibrary = [];
