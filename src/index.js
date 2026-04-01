@@ -505,6 +505,21 @@ form.addEventListener("submit", function (e) {
     tmpErrorSection.classList.remove("errors_detected");
   }
 
+  errorStr = validator.text_input(bookTitle, "book title");
+  let bookTitleError =
+    errorStr == "Input is valid"
+      ? ""
+      : createElement("p", ["error", "title"], "titleError", errorStr);
+  errorStr = validator.text_input(bookAuthor, "book author");
+  let bookAuthorError =
+    errorStr == "Input is valid"
+      ? ""
+      : createElement("p", ["error", "author"], "authorError", errorStr);
+  errorStr = validator.text_input(bookPages, "book pages");
+  let bookPagesError =
+    errorStr == "Input is valid"
+      ? ""
+      : createElement("p", ["error", "pages"], "pagesError", errorStr);
   const data = new FormData(form);
   let tmpTitle;
   let tmpAuthor;
