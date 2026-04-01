@@ -397,7 +397,7 @@ const validation = (errorField) => ({
       VALUEMISSING: true,
       VALID: true,
     };
-    let retValue = false;
+    let tmpStr = msg;
     // HTMLInputElement could be a button, text area, text field, checkbox etc..
     // So, the type is checked against "text" to make sure that this function is
     // checking validity against a text box.
