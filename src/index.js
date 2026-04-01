@@ -488,6 +488,8 @@ form.addEventListener("submit", function (e) {
   let bookAuthor = document.getElementById("bookauthor");
   let bookPages = document.getElementById("bookpages");
 
+  const cl = new Con("[form submit]");
+
   const data = new FormData(form);
   let tmpTitle;
   let tmpAuthor;
