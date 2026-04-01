@@ -490,6 +490,11 @@ form.addEventListener("submit", function (e) {
 
   const cl = new Con("[form submit]");
 
+  // NOTE: The design for the error message section:
+  //         1. Create a space for the error message output
+  //         2. Identify all the elements that will contribute to the error messages
+  //         3. Establish the conditions that will generate error messages
+  //         4. Determine when the code will proceed after checking for input errors
   const data = new FormData(form);
   let tmpTitle;
   let tmpAuthor;
