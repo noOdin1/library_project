@@ -378,6 +378,11 @@ checkbox.addEventListener("change", function () {
 
 const validation = (errorField) => ({
   // custom validation function
+
+  // The following dictionary was created as a customization tool. By making
+  // some of the inputs as 'false', the check will not be executed on the
+  // input object. So, far after testing going through all the checks is not
+  // prohibitive. So, for the moment I'll keeep all the checks as 'true'.
   text_input(obj, msg) {
     let CHECKTYPE = {
       BADINPUT: true,
