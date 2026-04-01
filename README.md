@@ -68,3 +68,4 @@ The new features:
 5. [done] Introduce private field/variables to Book class
 6. [done] Introduce static field/variables to Book class
 7. [done] Introduce static methods to Book class
+8. [done] Custom error messages for each input
