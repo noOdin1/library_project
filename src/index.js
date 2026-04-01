@@ -495,6 +495,7 @@ form.addEventListener("submit", function (e) {
   //         2. Identify all the elements that will contribute to the error messages
   //         3. Establish the conditions that will generate error messages
   //         4. Determine when the code will proceed after checking for input errors
+  let tmpErrorSection = document.getElementById("errorMsgSection");
   const data = new FormData(form);
   let tmpTitle;
   let tmpAuthor;
