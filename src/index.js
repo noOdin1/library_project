@@ -484,6 +484,9 @@ form.addEventListener("submit", function (e) {
    * 'submit' process. The process is handled here in this function.
    */
   e.preventDefault();
+  let bookTitle = document.getElementById("booktitle");
+  let bookAuthor = document.getElementById("bookauthor");
+  let bookPages = document.getElementById("bookpages");
 
   const data = new FormData(form);
   let tmpTitle;
