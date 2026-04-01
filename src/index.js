@@ -214,6 +214,12 @@ function createElement(elemType, class_list, unique_id, text_content) {
 }
 
 function createCardDiv(bookInfo) {
+  // Making sure that bookItem is an instance of "Book" class
+  if (!(Object.getPrototypeOf(bookInfo) === Book.prototype)) {
+    console.log("[createCardDiv] object is not of Book class");
+    return;
+  }
+
   let libCard = createElement("div", "libraryCard");
 
   bookInfoElements.forEach((infoElements) => {
