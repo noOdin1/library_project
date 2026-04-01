@@ -96,3 +96,21 @@ To merge "custom_error" branch with main branch:
    git branch -d custom_error
 7. cleanup for github repo,
    git push origin --delete custom_error
+
+Migrating over to using npm means that the former method of just add, commiting
+all your changes on github, won't work anymore.
+
+Going through the npm process means that there's a new directory added to the
+process, 'dist'. This directory is where the result of transpiling will reside.
+The directory will house the 'index.html'. This is the file needed to have the
+website operate normally by clicking on your website,
+
+- e.g. https://noodin1.github.io/library_project/ <br>
+  As a reference, read:
+- https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page <br>
+  As a summary of the above,
+- git branch gh-pages
+- git checkout gh-pages && git merge main --no-edit
+- npm run build
+- git add dist -f && git commit -m "Deployment commit 01"
+- git subtree push --prefix dist origin gh-pages
