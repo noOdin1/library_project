@@ -69,3 +69,30 @@ The new features:
 6. [done] Introduce static field/variables to Book class
 7. [done] Introduce static methods to Book class
 8. [done] Custom error messages for each input
+
+As a note on how to create a new branch for a repo:
+
+1. create the branch with the name, in this case 'custom_error'
+   git checkout -b custom_error
+2. on github repo, 'custom_error' isn't created yet. To do so,
+   git push -u origin custom_error
+3. whenever you push 'custom_error' commits
+   git push -u origin custom_error
+   note: change branch: "git checkout custom_error" or "git checkout main"
+
+All these changes was done on a new branch "custom_error".
+To merge "custom_error" branch with main branch:
+
+1. make sure all changes on 'custom_error' branch has been committed.
+2. checkout 'main' branch,
+   git checkout main
+3. merge the branch
+   git merge custom_error
+4. check that everything has been merged by checking the log
+   git log
+5. push your 'main' branch to your github repo,
+   git push -u origin main
+6. now perform cleanup by,
+   git branch -d custom_error
+7. cleanup for github repo,
+   git push origin --delete custom_error
