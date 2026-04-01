@@ -414,48 +414,52 @@ const validation = (errorField) => ({
         inputValidity.badInput &&
         validation.text_input.CHECKTYPE["BADINPUT"]
       ) {
-        console.log(
-          `Input string for ${msg} could not be converted from a string to a number`,
-        );
+        tmpStr = `Input string for ${msg} could not be converted from a string to a number`;
+        console.log(tmpStr);
       }
       if (inputValidity.customError && CHECKTYPE["CUSTOMERROR"]) {
-        console.log(`There is no custom message set for ${msg}`);
+        tmpStr = `There is no custom message set for ${msg}`;
+        console.log(tmpStr);
       }
       if (inputValidity.patternMismatch && CHECKTYPE["PATTERNMISMATCH"]) {
-        console.log(`Input string for ${msg} does not match pattern`);
+        tmpStr = `Input string for ${msg} does not match pattern`;
+        console.log(tmpStr);
       }
       if (inputValidity.rangeOverflow && CHECKTYPE["RANGEOVERFLOW"]) {
-        console.log(
-          `Input string for ${msg} is too long, value greater than max attribute`,
-        );
+        tmpStr = `Input string for ${msg} is too long, value greater than max attribute`;
+        console.log(tmpStr);
       }
       if (inputValidity.rangeUnderflow && CHECKTYPE["RANGEUNDERFLOW"]) {
-        console.log(
-          `Input string for ${msg} is too short, value less than min attribute`,
-        );
+        // tmpStr = `Input string for ${msg} is too short, value less than min attribute`;
+        tmpStr = `The ${msg} is under 1, must be 1 or higher`;
+        console.log(tmpStr);
       }
       if (inputValidity.stepMismatch && CHECKTYPE["STEPMISMATCH"]) {
-        console.log(
-          `Input string for ${msg} does not conform to the step attribute`,
-        );
+        tmpStr = `Input string for ${msg} does not conform to the step attribute`;
+        console.log(tmpStr);
       }
       // if (inputValidity.tooLong && validation.text_input.CHECKTYPE[TOOLONG]) {
       if (inputValidity.tooLong && CHECKTYPE["TOOLONG"]) {
-        console.log(`Input string for ${msg} exceeds the maxlength`);
+        tmpStr = `Input string for ${msg} exceeds the maxlength`;
+        console.log(tmpStr);
       }
       // if (inputValidity.tooShort && validation.text_input.CHECKTYPE[TOOSHORT]) {
       if (inputValidity.tooShort && CHECKTYPE["TOOSHORT"]) {
-        console.log(`Input string for ${msg} is less than the minlength`);
+        // tmpStr = `Input string for ${msg} is less than the minlength`;
+        tmpStr = `The ${msg} must be 3 letters or longer`;
+        console.log(tmpStr);
       }
       if (inputValidity.typeMismatch && CHECKTYPE["TYPEMISMATCH"]) {
-        console.log(`Input string for ${msg} is not the correct format`);
+        tmpStr = `Input string for ${msg} is not the correct format`;
+        console.log(tmpStr);
       }
       if (inputValidity.valueMissing && CHECKTYPE["VALUEMISSING"]) {
-        console.log(`Input string for ${msg} is missing`);
+        tmpStr = `Input string for ${msg} is missing`;
+        console.log(tmpStr);
       }
       if (inputValidity.valid && CHECKTYPE["VALID"]) {
-        console.log(`Input string for ${msg} is valid`);
-        retValue = true;
+        tmpStr = `Input is valid`;
+        console.log(tmpStr);
       }
     }
     return retValue;
