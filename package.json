@@ -3,13 +3,12 @@
   "version": "1.0.0",
   "description": "TOP Library Project",
   "main": "script.js",
-  "homepage": "https://github.com/noOdin1/library_project/",
+  "homepage": "https://github.com/noOdin1/library_project#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack serve --config webpack.dev.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
