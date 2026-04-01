@@ -538,6 +538,19 @@ form.addEventListener("submit", function (e) {
       "Errors detected, please rectify the inputs",
     );
     // cl.dir(bookPagesError);
+    tmpErrorSection.appendChild(tmpErrorSectionHeading);
+    if (bookTitleError !== "") {
+      tmpErrorSection.appendChild(bookTitleError);
+    }
+    if (bookAuthorError !== "") {
+      tmpErrorSection.appendChild(bookAuthorError);
+    }
+    if (bookPagesError !== "") {
+      tmpErrorSection.appendChild(bookPagesError);
+    }
+    tmpErrorSection.classList.add("errors_detected");
+
+    return;
   }
 
   const data = new FormData(form);
