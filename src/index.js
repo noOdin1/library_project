@@ -240,6 +240,7 @@ function createCardDiv(bookInfo) {
       val.addEventListener("click", changeBookStat);
     } else {
       let tmpInfo = valueOf(bookInfo, infoElements);
+      // console.log("[createCardDiv] tmpInfo: " + tmpInfo);
       val = createElement("p", "infoValue", "", tmpInfo);
     }
 
@@ -266,9 +267,9 @@ function createCardDiv(bookInfo) {
 
   libCard.append(tmpDiv);
 
-  console.log(
-    "[createCardDiv] Number of books processed: " + Book.get_book_count(),
-  );
+  // console.log(
+  //   "[createCardDiv] Number of books processed: " + Book.get_book_count(),
+  // );
 
   return libCard;
 }
