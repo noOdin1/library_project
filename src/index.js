@@ -520,6 +520,15 @@ form.addEventListener("submit", function (e) {
     errorStr == "Input is valid"
       ? ""
       : createElement("p", ["error", "pages"], "pagesError", errorStr);
+  // NOTE: The form will not reset and the error messages and tokens will remain on
+  //       screen until the user rectifies their input
+  if (
+    bookTitleError !== "" ||
+    bookAuthorError !== "" ||
+    bookPagesError !== ""
+  ) {
+  }
+
   const data = new FormData(form);
   let tmpTitle;
   let tmpAuthor;
