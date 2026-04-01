@@ -320,3 +320,28 @@ button {
     -webkit-transform: translateX(-250%);
   }
 }
+
+#errorMsgSection {
+  margin-top: 32em;
+  padding: 0.35em;
+}
+
+#errorMsgSection.errors_detected {
+  margin-top: 32em;
+  padding: 0.35em;
+  border: 1px MediumVioletRed solid;
+  border-radius: 0.5em;
+  font-size: 0.8em;
+}
+
+p.error {
+  color: red;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+p.error.heading {
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
